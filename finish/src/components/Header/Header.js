@@ -72,7 +72,7 @@ const Header = () => {
       </svg>
 
       <HeaderNavigation />
-      <CTAButton text={"Contact Us"} />
+      <CTAButton className="white" text={"Contact Us"} />
     </div>
   );
 };

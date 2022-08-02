@@ -18,7 +18,7 @@ const ChooseBox = (props) => {
     <div className={style.chooseBox}>
         <LocationIcon/>
         <div className={style.chooseBox__info}>
-            <span>{props.locationText}</span>
+            <span className={style.option}>{props.locationText}</span>
             <span>{props.info}</span>
         </div>
         <DropDownIcon onClickAction={openCalendar} onBlurAction={closeCalendar} />

@@ -6,7 +6,7 @@ import style from "./Information.module.scss";
 const Information = () => {
   return (
     <div className={style.information}>
-        <PriceCard daily={" 880₺"} weekly={"  5900₺"} />
+        <PriceCard daily={" 880 ₺"} weekly={"  5900 ₺"} />
         <InformationCar name={"Rent The Best Cars"}/>
         <Slider/>
     </div>

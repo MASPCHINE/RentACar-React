@@ -1,15 +1,11 @@
-import style from "./CTAButton.module.scss";
-const CTAButton = (props) => {
-  // const clickAction = () => {
-  //   props.onClickAction();
-  // }
+//import style from "./CTAButton.module.scss";
+import "./CTAButton.css";
 
-  // const closeAction = () => {
-  //   props.onBlurAction();
-  // }
+const CTAButton = (props) => {
+  const classes = "button " + props.className
   return (
     <div>
-        <button className={style.button}  >{props.text}</button>
+        <button className={classes}>{props.text}</button>
     </div>
   )
 }

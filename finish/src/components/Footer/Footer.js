@@ -11,6 +11,7 @@ const Footer = () => {
       <ChooseBox locationText={locaitonText} info={info}/>
       <ChooseBox locationText={locaitonText} info={info}/>
       <CTAButton text="Search"/>
+      
     </div>
   );
 };

@@ -4,8 +4,8 @@ import style from "./MainCar.module.scss";
 const MainCar = () => {
   return (
     <div className={style.slider}>
-      <img className={style.slider__img} src={SliderCar} alt="Rent A Car"></img>
       <Button text="More Details"></Button>
+      <img className={style.slider__img} src={SliderCar} alt="Rent A Car"></img>
     </div>
   );
 };
