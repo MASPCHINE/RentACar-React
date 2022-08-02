@@ -1,8 +1,10 @@
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header/Header";
-import style from "./App.module.scss";
 import Information from "./components/Information/Information";
 import MainCar from "./components/MainCar/MainCar";
+
+import style from "./App.module.scss";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -18,7 +20,7 @@ function App() {
           <MainCar />
         </section>
         <section>
-          
+          <Footer></Footer>
         </section>
       </div>
     </div>

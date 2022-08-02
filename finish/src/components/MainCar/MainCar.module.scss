@@ -1,11 +1,9 @@
 .slider {
     display: flex;
-    position: relative;
     align-items: center ;
     justify-content: center;
    
     &__img{
-        position: absolute;
         height: 300px;
         width: 1000px;
         object-fit: cover;  

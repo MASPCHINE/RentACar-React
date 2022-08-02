@@ -8,7 +8,7 @@ const isActiveMenu = (data) =>{
 }
   return (
     <nav className={style.navigation}>
-      <NavLink className={isActiveMenu}to="Home">Home</NavLink>
+      <NavLink className={isActiveMenu} to="Home">Home</NavLink>
       <NavLink to="Cars">Cars</NavLink>
       <NavLink to="OurServices">OurServices</NavLink>
     </nav>

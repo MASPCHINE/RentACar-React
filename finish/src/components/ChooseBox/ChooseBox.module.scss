@@ -1,0 +1,22 @@
+.chooseBox {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px 0px;
+    padding: 20px 40px;
+    color: #fff;
+   
+    &__info{
+        display: flex;
+        flex-direction: column;
+        padding: 0px 20px;
+        
+    }
+
+    &__calendar {
+        margin: 15px 0px;
+        padding: 20px 10px;
+        background-color: #fff;
+        width: 350px;
+        height: 200px;
+    }
+}
