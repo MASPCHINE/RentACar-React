@@ -5,8 +5,16 @@ import MainCar from "./components/MainCar/MainCar";
 
 import style from "./App.module.scss";
 import Footer from "./components/Footer/Footer";
+import useHttp from "./hooks/use-http";
+import { useEffect } from "react";
 
 function App() {
+  const  {data, getData} = useHttp();
+
+  useEffect(()=>{
+    getData("https://carwebsite-7bbef-default-rtdb.europe-west1.firebasedatabase.app/cars.json")
+  },[])
+  
   return (
     <div className={style.App}>
       <div className={style.App__main}>

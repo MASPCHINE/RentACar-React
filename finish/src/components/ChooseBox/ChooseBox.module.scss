@@ -1,18 +1,8 @@
 .chooseBox {
     display: flex;
-    position: relative;
-    flex-direction: row;
-    margin-top: 40px 0px;
-    padding: 20px 40px;
-
-    &::after{
-        border: 10px solid black;
-        position: absolute;
-        right: 0;
-        width: 1px;
-        height: 12px;
-    }
     
+    flex-direction: row;
+    padding: 20px 0px;
    
     &__info{
         display: flex;
@@ -23,7 +13,6 @@
         color: rgb(197, 197, 197);
 
     }
-    
     
     &__calendar {
         margin: 15px 0px;

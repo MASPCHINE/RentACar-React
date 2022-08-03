@@ -1,8 +1,9 @@
+import style from "./SearchIcon.module.scss";
 const SearchIcon = () => {
   return (
     <div>
       {
-        <svg
+        <svg className={style.searchIcon}
           title="Search"
           aria-label="Search"
           role="img"
