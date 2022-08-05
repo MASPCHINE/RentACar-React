@@ -8,12 +8,11 @@ const ChooseBox = (props) => {
     const [calendar, setCalendar] = useState(false);
 
     const openCalendar = () => {
-      setCalendar(true);
+      setCalendar(!calendar);
     };
     
-    const closeCalendar = () => {
-      setCalendar(false);
-    };
+  
+
   return (
     <div className={style.chooseBox}>
         <LocationIcon/>
@@ -21,7 +20,7 @@ const ChooseBox = (props) => {
             <span className={style.option}>{props.locationText}</span>
             <span>{props.info}</span>
         </div>
-        <DropDownIcon onClickAction={openCalendar} onBlurAction={closeCalendar} />
+        <DropDownIcon onClickAction={openCalendar} />
         {calendar && <Calendar className={style.chooseBox__calendar}  />}
     </div>
   )
