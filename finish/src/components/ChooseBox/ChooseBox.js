@@ -10,9 +10,6 @@ const ChooseBox = (props) => {
     const openCalendar = () => {
       setCalendar(!calendar);
     };
-    
-  
-
   return (
     <div className={style.chooseBox}>
         <LocationIcon/>

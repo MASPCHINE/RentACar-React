@@ -17,7 +17,6 @@ function App() {
         </section>
         <section>
           <Information />
-          <MainCar />
         </section>
         <section>
           <Footer></Footer>

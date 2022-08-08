@@ -5,10 +5,6 @@ const DropDownIcon = (props) => {
     props.onClickAction();
   };
 
-  const openClose = () => {
-    props.onCloseAction();
-  }
-
   return (
     <div>
       <svg onClick={openMenu}  className={style.dropDownIcon}
