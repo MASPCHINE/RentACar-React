@@ -2,7 +2,7 @@ import PriceCard from "../PriceCard/PriceCard";
 import InformationCar from "./InformationCar";
 import style from "./Information.module.scss";
 import useHttp from "../../hooks/use-http";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import MainCar from "../MainCar/MainCar";
 
 const Information = () => {
@@ -13,24 +13,27 @@ const Information = () => {
     );
   }, []);
 
+  const [filteredPrice, setFilteredPrice] = useState("");
+  const [filteredBrand, setFilteredBrand] = useState("");
 
-  const sliderAction = () => {
-    console.log("2.aşama denemesi");
+
+  const sliderAction = (realIndex) => {
+    setFilteredPrice(data.map((car) =>car.id === realIndex ? (
+      <PriceCard key={car.id} daily={car.daily} weekly={car.weekly} />
+    ) : "" ));
+
+    setFilteredBrand(data.map((car) => car.id === realIndex ? (
+      <InformationCar key={car.id} name={car.brand} />
+    ): ""));
+
   };
+
 
   return (
     <div>
       <div className={style.information}>
-        <div className={style.information__upper}>
-          {data.map((car) => (
-            <PriceCard key={car.id} daily={car.daily} weekly={car.weekly} />
-          ))}
-        </div>
-        <div className={style.information__upper}>
-          {data.map((car) => (
-            <InformationCar key={car.id} name={car.brand} />
-          ))}
-        </div>
+        <div className={style.information__upper}>{filteredPrice}</div>
+        <div className={style.information__upper}>{filteredBrand}</div>
       </div>
       <div className={style.information__carImage}>
         <MainCar data={data} onSliderAction={sliderAction} />

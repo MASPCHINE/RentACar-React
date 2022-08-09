@@ -1,7 +1,5 @@
 import Button from "../Button/CTAButton";
 import style from "./MainCar.module.scss";
-import useHttp from "../../hooks/use-http";
-import { useEffect } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
@@ -10,27 +8,20 @@ import "swiper/scss/pagination";
 
 const MainCar = (props) => {
   const onSliderAction = props.onSliderAction;
-  //console.log("props",props);
-  // useEffect(() => {
-  //   getData(
-  //     "https://carsv2-6fe95-default-rtdb.europe-west1.firebasedatabase.app/cars.json"
-  //   );
-   
-  // }, []);
 
-  const photos = props.data && props.data.map((photo) => (
-    <SwiperSlide>
-      <img src={photo.svg} className={style.slider__img} />
-    </SwiperSlide>
-  ));
+  const photos =
+    props.data &&
+    props.data.map((photo) => (
+      <SwiperSlide>
+        <img key={photo.id} src={photo.svg} className={style.slider__img} alt={photo.brand}/>
+      </SwiperSlide>
+    ));
 
-  const onChanged = (props) => {
-    console.log("1.aşama",onSliderAction);
+  const onChanged = (e) => {
+    onSliderAction(e.realIndex);
+  };
 
-    onSliderAction();
-    
-  }
-
+  
   const slider = (
     <Swiper
       direction={"horizontal"}
@@ -38,6 +29,7 @@ const MainCar = (props) => {
       pagination={{
         clickable: true,
       }}
+      //onTransitionEnd={transitionEndHandler}
       modules={[Pagination]}
       className={style.mySwiper}
     >
