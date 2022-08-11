@@ -13,7 +13,12 @@ const MainCar = (props) => {
     props.data &&
     props.data.map((photo) => (
       <SwiperSlide>
-        <img key={photo.id} src={photo.svg} className={style.slider__img} alt={photo.brand}/>
+        <img
+          key={photo.id}
+          src={photo.svg}
+          className={style.slider__img}
+          alt={photo.brand}
+        />
       </SwiperSlide>
     ));
 
@@ -21,7 +26,6 @@ const MainCar = (props) => {
     onSliderAction(e.realIndex);
   };
 
-  
   const slider = (
     <Swiper
       direction={"horizontal"}

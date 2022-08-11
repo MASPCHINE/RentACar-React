@@ -32,8 +32,8 @@ const Information = () => {
   return (
     <div>
       <div className={style.information}>
-        <div className={style.information__upper}>{filteredPrice}</div>
-        <div className={style.information__upper}>{filteredBrand}</div>
+        <div className={style.information__price}>{filteredPrice}</div>
+        <div className={style.information__brand}>{filteredBrand}</div>
       </div>
       <div className={style.information__carImage}>
         <MainCar data={data} onSliderAction={sliderAction} />

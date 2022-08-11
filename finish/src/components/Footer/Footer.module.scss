@@ -1,17 +1,20 @@
 .footer {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    padding: 30px 50px;
     width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #484848 ;
-    border-radius: 50px;
-    box-shadow: 0px -50px 100px 10px #6243E9;
-    //flex-wrap: wrap;
+    &__card{
+        display: flex;
+        flex-direction: row;
+        margin: 0px 30px 0px;
+        
+        padding: 30px 50px;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #484848 ;
+        border-radius: 50px;
+        box-shadow: 0px -50px 100px 10px #6243E9;
+    
+        [class*="yellow"]{
+            margin-left: 50px;
+        }
 
-    [class*="yellow"]{
-        margin-left: 50px;
     }
 }

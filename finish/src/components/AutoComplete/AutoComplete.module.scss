@@ -1,0 +1,20 @@
+.autoComplete{
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0px;
+
+  &__input{
+    display: flex;
+    background-color: none;
+  }
+
+  &__info{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    font-size: 20px;
+    font-family: serif;
+    color: rgb(197, 197, 197);
+
+}
+}

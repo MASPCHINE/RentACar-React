@@ -9,8 +9,8 @@ const isActiveMenu = (data) =>{
   return (
     <nav className={style.navigation}>
       <NavLink className={isActiveMenu} to="Home">Home</NavLink>
-      <NavLink to="Cars">Cars</NavLink>
-      <NavLink to="OurServices">OurServices</NavLink>
+      <NavLink to="/cars">Cars</NavLink>
+      <NavLink to="/ourServices">OurServices</NavLink>
     </nav>
   );
 };

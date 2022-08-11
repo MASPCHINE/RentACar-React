@@ -3,16 +3,17 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    
 
     &__img {
         height: 300px;
         width: 100%;
-        object-fit:contain;
+        object-fit: contain;
     }
 
     [class*="yellow"] {
-        left: 0;
+        position: absolute;
+        bottom: 10px;
+        left: 30px;
     }
 
     [class*="swiper-slide"] {
