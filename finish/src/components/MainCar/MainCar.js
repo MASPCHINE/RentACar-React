@@ -7,12 +7,16 @@ import "swiper/scss";
 import "swiper/scss/pagination";
 
 const MainCar = (props) => {
+
+  
+  
   const onSliderAction = props.onSliderAction;
+
 
   const photos =
     props.data &&
     props.data.map((photo) => (
-      <SwiperSlide>
+      <SwiperSlide key={photo.id}>
         <img
           key={photo.id}
           src={photo.svg}

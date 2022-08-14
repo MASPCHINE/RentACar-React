@@ -1,14 +1,15 @@
 .card{
     display: flex;
     flex-direction: column;
-    flex: 1 1 33%;
     width: max-content;
+    height: 100%;
     &__priceCard{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        align-items: flex-end;
         
-        margin: 25px 0px;
+        padding-bottom: 25px;
         font-weight: bold;
         font-size: 36px;
         color: #fff;

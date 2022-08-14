@@ -1,7 +1,7 @@
-import { BrowserRouter,Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Information from "./components/Information/Information";
-import Login from "./components/Login/Login"
+import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Reset from "./components/Reset/Reset";
 import Dashboard from "./components/Dashboard/Dashboard";
@@ -19,20 +19,19 @@ function App() {
           <Route exact path="/reset" element={<Reset />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
         </Routes>
-      </BrowserRouter>
-      <div>
-        <section>
-          <BrowserRouter>
+
+        <>
+          <section>
             <Header />
-          </BrowserRouter>
-        </section>
-        <section>
-          <Information />
-        </section>
-        <section>
-          <Footer></Footer>
-        </section>
-      </div>
+          </section>
+          <section>
+            <Information />
+          </section>
+          <section>
+            <Footer></Footer>
+          </section>
+        </>
+      </BrowserRouter>
     </div>
   );
 }

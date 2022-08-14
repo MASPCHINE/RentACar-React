@@ -19,7 +19,7 @@ const ChooseBox = (props) => {
 
   const changeHandler = (event) =>{
    setInfo(event.toLocaleDateString('eng', options))
-    
+
   }
 
   return (
@@ -37,8 +37,7 @@ const ChooseBox = (props) => {
         </div>
         <DropDownIcon onClickAction={openCalendar} />
       </div>
-      
-      {calendar && <Calendar minDate={new Date()}  onClickDay={changeHandler}/>}
+      {calendar && <Calendar  minDate={new Date()}  onClickDay={changeHandler}/>}
     </div>
   );
 };

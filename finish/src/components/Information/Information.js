@@ -7,10 +7,11 @@ import MainCar from "../MainCar/MainCar";
 
 const Information = () => {
   const { data, getData } = useHttp();
-  useEffect(() => {
+   useEffect(() => {
     getData(
       "https://carsv2-6fe95-default-rtdb.europe-west1.firebasedatabase.app/cars.json"
     );
+    
   }, []);
 
   const [filteredPrice, setFilteredPrice] = useState("");
@@ -18,6 +19,7 @@ const Information = () => {
 
 
   const sliderAction = (realIndex) => {
+    
     setFilteredPrice(data.map((car) =>car.id === realIndex ? (
       <PriceCard key={car.id} daily={car.daily} weekly={car.weekly} />
     ) : "" ));

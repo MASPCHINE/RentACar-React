@@ -24,14 +24,15 @@ function Dashboard() {
     if (!user) return navigate("/");
     fetchUserName();
   }, [user, loading]);
+
   return (
     <div className="dashboard">
-       <div className="dashboard__container">
+       <div className="dashboard__container" >
         Logged in as
          <div>{name}</div>
          <div>{user?.email}</div>
          <button className="dashboard__btn" onClick={logout}>
-          Logout
+          Home
          </button>
        </div>
      </div>

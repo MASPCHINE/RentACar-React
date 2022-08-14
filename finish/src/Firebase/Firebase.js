@@ -89,7 +89,6 @@ export{
   db,
   signInWithGoogle,
   logInWithEmailAndPassword,
-  signInWithEmailAndPassword,
   sendPasswordResetEmail,
   registerWithEmailAndPassword,
   sendPasswordReset,
