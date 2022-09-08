@@ -9,7 +9,7 @@ const Information = () => {
   const { data, getData } = useHttp();
    useEffect(() => {
     getData(
-      "https://carsv2-6fe95-default-rtdb.europe-west1.firebasedatabase.app/cars.json"
+      "https://carv3-2fb3e-default-rtdb.europe-west1.firebasedatabase.app/cars.json"
     );
     
   }, []);
